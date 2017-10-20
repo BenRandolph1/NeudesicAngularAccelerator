@@ -1,0 +1,102 @@
+@import '../../../less/variables';
+@import '../../../less/mixins';
+
+ .left-sidebar {
+    
+    .brand {
+        padding-bottom: 40px;
+        text-align: center;
+
+        a {
+            display: block;
+
+            img {
+                margin: 40px 0 0;
+            }
+        }
+    }
+
+     .main-nav {
+
+        ul {
+            margin-bottom: 20px;
+            width: inherit;
+
+            + ul {
+                border-top: @border-dashed;
+               margin-top: 10px;
+               padding-top: 20px;
+            }
+        }
+
+         li {
+            line-height: 1.75;
+            padding-left: 15px;
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &.nav-title {
+                .title-blue;
+                font-size: 15px;
+            }
+
+            a {
+                color: @color-text;
+                font-size: 11px;
+                text-decoration: none;
+
+                &:hover {
+                    color: @textcolor-white;
+                }
+            }
+         }
+
+        .wellheadlink {
+            border-top: 1px dashed #a7a9a9;
+            padding-top: 15px;
+            color: @color-black;
+
+            i.fa {
+                line-height: inherit;
+                float:left;
+            }
+
+         }
+     }
+}
+  
+
+ul.level1 {
+
+li {
+    position: relative;
+
+    a i {
+        margin-top: 4px;
+        margin-right: 10px;
+        font-size: 10px;
+        float: right;
+    }
+
+    ul {
+        visibility: hidden;
+        background-color: @color-nav-flyout;
+    }
+}
+
+li:hover {
+    background-color: @color-nav-hover;
+
+    a {
+        color: @textcolor-white;
+    }
+}
+
+li:hover > ul {
+    visibility: visible;
+    background-color: @color-nav-flyout;
+    z-index: 100;
+    }
+}
